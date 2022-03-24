@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="mx.edu.itm.link.reto_navigationgraph.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_insideHome"
+            app:destination="@id/insideHome" />
+    </fragment>
+    <fragment
+        android:id="@+id/insideHome"
+        android:name="mx.edu.itm.link.reto_navigationgraph.InsideHome"
+        android:label="fragment_inside_home"
+        tools:layout="@layout/fragment_inside_home" >
+        <argument
+            android:name="argumentoNombre"
+            app:argType="string"
+            android:defaultValue="empty" />
+        <argument
+            android:name="argumentoApellidoPaterno"
+            app:argType="string"
+            android:defaultValue="empty" />
+        <argument
+            android:name="argumentoApellidoMaterno"
+            app:argType="string"
+            android:defaultValue="empty" />
+        <argument
+            android:name="argumentoUsuario"
+            app:argType="string"
+            android:defaultValue="empty" />
+        <argument
+            android:name="argumentoCorreo"
+            app:argType="string"
+            android:defaultValue="empty" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="mx.edu.itm.link.reto_navigationgraph.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+</navigation>
